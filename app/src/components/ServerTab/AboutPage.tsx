@@ -51,8 +51,8 @@ export function AboutPage() {
           <FadeIn delay={80}>
             <div className="space-y-1.5">
               <h1 className="text-lg font-semibold">Voicebox</h1>
-              <p className="text-sm font-semibold text-accent">正泽 · Corebrandings</p>
-              <p className="text-xs text-muted-foreground">非官方社区预览版 · Unofficial community preview</p>
+              <p className="text-sm font-semibold text-accent">Corebrandings</p>
+              <p className="text-xs text-muted-foreground">Unofficial community preview</p>
               <p className="text-xs text-muted-foreground/60 h-4">
                 {version ? `v${version}` : '\u00A0'}
               </p>
@@ -86,7 +86,7 @@ export function AboutPage() {
               rel="noopener noreferrer"
               className="text-sm text-accent hover:underline"
             >
-              Corebrandings 社区源码与下载
+              Corebrandings source & downloads
             </a>
             <div className="flex flex-wrap justify-center gap-3 pt-2">
               <a

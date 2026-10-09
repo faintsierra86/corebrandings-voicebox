@@ -287,8 +287,8 @@ function UpdatesSection() {
     >
       {platform.metadata.isTauri ? (
         <SettingRow
-          title="正泽 · Corebrandings 社区预览版"
-          description="请从社区发布页下载更新。Community updates are installed manually."
+          title="Corebrandings community preview"
+          description="Download updates from the community Releases page. Updates are installed manually."
           action={
             <a
               href="https://github.com/faintsierra86/corebrandings-voicebox/releases"
@@ -296,7 +296,7 @@ function UpdatesSection() {
               rel="noopener noreferrer"
               className="text-sm text-accent hover:underline"
             >
-              下载 / Releases
+              Releases
             </a>
           }
         />

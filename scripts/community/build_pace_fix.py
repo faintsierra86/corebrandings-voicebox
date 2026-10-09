@@ -203,8 +203,8 @@ def main():
     output.parent.mkdir(parents=True, exist_ok=True)
     shutil.copytree(source_app, output, symlinks=True)
     (output/'Contents/MacOS/voicebox-server').write_bytes(patched)
-    info['CFBundleDisplayName'] = 'Voicebox 节奏修复版'
-    info['CFBundleName'] = 'Voicebox 节奏修复版'
+    info['CFBundleDisplayName'] = 'Voicebox Pace Fix'
+    info['CFBundleName'] = 'Voicebox Pace Fix'
     # Keep identifier and version so existing local voices/settings remain available.
     (output/'Contents/Info.plist').write_bytes(plistlib.dumps(info))
     manifest = dict(patch='voicebox-0.5.0-pace-fix-1', base_version='0.5.0',

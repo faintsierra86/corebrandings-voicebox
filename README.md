@@ -1,18 +1,10 @@
-# Voicebox · 正泽 Corebrandings 社区预览版
+# Voicebox · Corebrandings Community Preview
 
 **0.6.0-local.1 · Apple Silicon · macOS 15+**
 
-[下载 / Downloads](https://github.com/faintsierra86/corebrandings-voicebox/releases) · [原项目 / Original project](https://github.com/jamiepine/voicebox)
+[Downloads](https://github.com/faintsierra86/corebrandings-voicebox/releases) · [Original project](https://github.com/jamiepine/voicebox)
 
-这是正泽（Corebrandings）维护的非官方 Voicebox 社区预览版。合并官方 0.6.0 准备版本的稳定性修复，并回补 Qwen 长文本朗读逐渐加速问题的重复惩罚窗口修复。保留原作者和各依赖的许可，不代表官方背书。
-
-中文安装：适用于 M1 及后续 Apple 芯片，macOS 15 或以上。先备份原 Voicebox 数据，完成生成任务并退出；首次从旧版切换时重启 Mac。打开 DMG，将 **Voicebox Corebrandings.app** 拖进 Applications。应用侧栏应显示“正泽 / Corebrandings”和 v0.6.0-local.1。一次只运行一个版本，社区版与原版共用原有数据。安装包不含任何个人声音，需自行创建声音及下载模型。
-
-目前已通过 122 项选定检查及本机启动、生成、卸载模型验证；多台 Mac 和长篇试听仍需实测。请先试一段 5–10 分钟的文字，比较开头和结尾语速，再用于正式内容。此包为临时签名，未通过 Apple 公证；如被拦截，可在系统设置“隐私与安全性”中按系统提示允许。请从上面的社区发布页手动更新。
-
-## English
-
-An unofficial Apple Silicon maintenance build maintained by 正泽 (Corebrandings). Based on upstream's 0.6.0 preparation commit a00d271, plus the upstream frozen-Torch startup fix 82caf7d and the core Qwen repetition-history fix from mlx-audio PR #914. Upstream Voicebox remains the original project; this build is not an official release and does not imply endorsement.
+An unofficial Apple Silicon maintenance build maintained by Corebrandings. Based on upstream's 0.6.0 preparation commit a00d271, plus the upstream frozen-Torch startup fix 82caf7d and the core Qwen repetition-history fix from mlx-audio PR #914. Upstream Voicebox remains the original project; this build is not an official release and does not imply endorsement.
 
 ## Requirements and installation
 
