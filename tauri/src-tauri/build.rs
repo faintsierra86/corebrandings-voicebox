@@ -31,13 +31,22 @@ fn main() {
     let gen_dir = format!("{}/gen", project_root);
     std::fs::create_dir_all(&gen_dir).expect("Failed to create gen directory");
 
+    // Local maintenance builds reuse the unchanged, compiled upstream icon.
+    let prebuilt_icons = std::env::var("VOICEBOX_PREBUILT_ICON_DIR").ok();
+    if let Some(ref icon_dir) = prebuilt_icons {
+        for name in ["Assets.car", "voicebox.icns", "partial.plist"] {
+            std::fs::copy(format!("{icon_dir}/{name}"), format!("{gen_dir}/{name}"))
+                .expect("Missing prebuilt upstream icon resource");
+        }
+    }
+
     // Compile macOS Liquid Glass icon
     #[cfg(target_os = "macos")]
     {
         // voicebox.icon is in tauri/assets/voicebox.icon (one level up from src-tauri)
         let icon_source = format!("{}/../assets/voicebox.icon", project_root);
 
-        if std::path::Path::new(&icon_source).exists() {
+        if prebuilt_icons.is_none() && std::path::Path::new(&icon_source).exists() {
             println!("cargo:rerun-if-changed={}", icon_source);
             println!("cargo:rerun-if-changed={}/icon.json", icon_source);
             println!("cargo:rerun-if-changed={}/Assets", icon_source);

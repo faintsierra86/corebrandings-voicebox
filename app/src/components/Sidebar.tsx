@@ -96,6 +96,15 @@ export function Sidebar({ isMacOS }: SidebarProps) {
         className="mt-auto flex flex-col items-center gap-1.5 transition-all duration-300"
         style={{ paddingBottom: isPlayerOpen ? '7rem' : undefined }}
       >
+        <Link
+          to="/settings"
+          title="正泽 · Corebrandings — 非官方社区预览版"
+          aria-label="正泽 · Corebrandings 社区维护版"
+          className="flex flex-col items-center text-center leading-tight text-accent"
+        >
+          <span className="text-[11px] font-semibold">正泽</span>
+          <span className="text-[8px] mt-1">Corebrandings</span>
+        </Link>
         <span className="text-[10px] text-muted-foreground/50">v{version}</span>
         {updateStatus.available && (
           <Link

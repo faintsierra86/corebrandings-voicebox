@@ -285,7 +285,22 @@ function UpdatesSection() {
       title={t('settings.general.updates.title')}
       description={`v${versionLabel}${isDev ? t('settings.general.updates.devSuffix') : ''}`}
     >
-      {isDev ? (
+      {platform.metadata.isTauri ? (
+        <SettingRow
+          title="正泽 · Corebrandings 社区预览版"
+          description="请从社区发布页下载更新。Community updates are installed manually."
+          action={
+            <a
+              href="https://github.com/faintsierra86/corebrandings-voicebox/releases"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-accent hover:underline"
+            >
+              下载 / Releases
+            </a>
+          }
+        />
+      ) : isDev ? (
         <SettingRow
           title={t('settings.general.updates.devMode.title')}
           description={t('settings.general.updates.devMode.description')}
