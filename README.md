@@ -26,6 +26,8 @@ No personal voice profiles, reference recordings, generated audio, database or b
 
 ## Validation and limits
 
+User-reported benchmark: on an Apple Mac mini M6 with 24 GB of memory, generation reached 5.56 tokens/s, approximately 5x the M1 result.
+
 108 selected upstream backend regression tests, 8 frozen-Qwen sampler tests and 6 frozen-Torch hook tests passed: 122 checks in total. Frontend type checking, production frontend/native compilation, code-signature verification, startup, a migration against a private copied database, a short real Qwen 1.7B generation and model unload were also checked.
 
 Testing was conducted on one Apple Silicon Mac. The recording and private database used for validation are not distributed. Other Mac hardware, other undownloaded TTS engines and subjective long-form pacing have not been fully validated. This preview should be tested with a backup before production use. Report macOS version, chip, engine/model, chunk limit, steps and error text; share recordings only when you are permitted to make them public.
